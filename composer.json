@@ -1,0 +1,34 @@
+{
+  "license": "MIT",
+  "name": "hopkins/gamesbase",
+  "description": "A base library for various games. ",
+  "keywords": [
+    "laravel",
+    "slack",
+    "hubot",
+    "api",
+    "webhook"
+  ],
+  "authors": [
+    {
+      "name": "Michael Hopkins",
+      "email": "mhopkins321@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "laravel/framework": "5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hopkins\\GamesBase\\": "src"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-develop": "1.0-dev",
+      "dev-master": "0.9-dev"
+    }
+  },
+  "minimum-stability": "dev"
+}
