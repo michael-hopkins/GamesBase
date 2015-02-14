@@ -1,4 +1,4 @@
-<?php namespace Hopkins\SlackAgainstHumanity\Providers;
+<?php namespace Hopkins\GamesBase\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

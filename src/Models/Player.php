@@ -1,4 +1,4 @@
-<?php namespace Hopkins\SlackAgainstHumanity\Models;
+<?php namespace Hopkins\GamesBase\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -27,8 +27,9 @@ class Player extends Model
 {
     protected $fillable = ['user_name','cah','idle','is_judge','played','num_cards'];
 
-    public function cards()
-    {
-        return $this->hasMany(Card::class);
+    public function cards(){
+        return $this->hasMany('\Hopkins\SlackAgainstHumanity\Models\Card');
     }
+
+
 }
