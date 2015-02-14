@@ -31,5 +31,9 @@ class Player extends Model
         return $this->hasMany('\Hopkins\SlackAgainstHumanity\Models\Card');
     }
 
+    public function points(){
+        return $this->hasMany(Point::class);
+    }
+
 
 }
