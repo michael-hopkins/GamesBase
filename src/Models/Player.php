@@ -5,14 +5,14 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Hopkins\SlackAgainstHumanity\Models\Player
  *
- * @property integer $id 
- * @property string $user_name 
- * @property string $password 
- * @property string $remember_token 
- * @property \Carbon\Carbon $created_at 
- * @property \Carbon\Carbon $updated_at 
- * @property-read \Illuminate\Database\Eloquent\Collection|Card[] $cards 
- * @property-read \Illuminate\Database\Eloquent\Collection|\$related[] $morphedByMany 
+ * @property integer $id
+ * @property string $user_name
+ * @property string $password
+ * @property string $remember_token
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|Card[] $cards
+ * @property-read \Illuminate\Database\Eloquent\Collection|\$related[] $morphedByMany
  * @method static Builder|Player whereId($value)
  * @method static Builder|Player whereUserName($value)
  * @method static Builder|Player whereCah($value)
@@ -22,6 +22,12 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|Player whereNumCards($value)
  * @method static Builder|Player whereCreatedAt($value)
  * @method static Builder|Player whereUpdatedAt($value)
+ * @property integer $cah
+ * @property integer $played
+ * @property integer $num_cards
+ * @property integer $is_judge
+ * @property integer $idle
+ * @property-read \Illuminate\Database\Eloquent\Collection|Point[] $points
  */
 class Player extends Model
 {
