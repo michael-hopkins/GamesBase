@@ -17,7 +17,8 @@
     }
   ],
   "require": {
-    "illuminate/database": "5.*"
+    "illuminate/database": "5.*",
+    "watson/validating": "dev-master"
   },
   "autoload": {
     "psr-4": {
