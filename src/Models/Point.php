@@ -1,6 +1,7 @@
 <?php namespace Hopkins\GamesBase\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Watson\Validating\ValidatingTrait;
 
 class Point extends Model
 {
