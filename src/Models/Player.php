@@ -15,7 +15,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|Point[] $points
- * @property-read \Illuminate\Database\Eloquent\Collection|\Hopkins\SlackAgainstHumanity\Models\Card[] $cards
  * @property-read \Illuminate\Database\Eloquent\Collection|\$related[] $morphedByMany
  * @method static Builder|Player whereId($value)
  * @method static Builder|Player whereUserName($value)
@@ -29,10 +28,10 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Player extends Model
 {
-    protected $fillable = ['user_name','cah','idle','is_judge','played','num_cards'];
+    protected $guarded = ['id'];
 
     public function cards(){
-        return $this->hasMany('\Hopkins\SlackAgainstHumanity\Models\Card');
+        return $this->hasMany('\Hopkins\SlackAgainstHumanity\Models\Card','player_id','id');
     }
 
     public function points(){
