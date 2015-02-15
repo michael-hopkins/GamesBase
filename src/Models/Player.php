@@ -25,18 +25,13 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|Player whereIdle($value)
  * @method static Builder|Player whereCreatedAt($value)
  * @method static Builder|Player whereUpdatedAt($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Hopkins\SlackAgainstHumanity\Models\Card[] $cards
  */
 class Player extends Model
 {
     protected $guarded = ['id'];
 
-    public function cards(){
-        return $this->hasMany('\Hopkins\SlackAgainstHumanity\Models\Card','player_id','id');
-    }
-
     public function points(){
-        return $this->hasMany(Point::class);
+        return $this->hasMany(Point::class,'for','user_name');
     }
-
-
 }

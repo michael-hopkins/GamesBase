@@ -38,6 +38,6 @@ class Point extends Model
     protected $guard = ['id'];
 
     public function player(){
-        return $this->belongsTo(Player::class);
+        return $this->belongsTo(Player::class,'for','user_name');
     }
 }
