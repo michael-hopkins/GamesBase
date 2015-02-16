@@ -35,7 +35,7 @@ class Point extends Model
         'reason' => 'string',
         'given_by' => 'string'
     ];
-    protected $guard = ['id'];
+    protected $guarded = ['id'];
 
     public function player(){
         return $this->belongsTo(Player::class,'for','user_name');
